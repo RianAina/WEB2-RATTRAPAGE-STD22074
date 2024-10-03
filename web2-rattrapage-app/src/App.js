@@ -16,23 +16,32 @@ function App() {
 
   return (
     <div className="App">
-      <h1 style={{ color: "black" }}>All appartements</h1>
+      <h1 style={{ color: "black" }}>All appartements
+      </h1>
+      <input type="text" placeholder="Filtrer par prix max"></input>
+      <button>Filter</button>
       <center>
         {data.map((dataObj, index) => {
           return (
-            <div key={index}>  
 
+            <div>  
+        
+              <div key={index}>  
+            
         
               <img src={dataObj.picture} alt={dataObj.description}></img>
-              <p style={{ fontSize: 20, color: 'black' }}>{dataObj.description}</p> 
-              <p style={{ fontSize: 20, color: 'grey' }}>Prix: {dataObj.price} €</p>
+              <p style={{ fontSize: 20, color: 'black'}}>{dataObj.description}</p> 
+              <p style={{ fontSize: 20, color: 'grey' }}>Prix: {dataObj.price} Euro</p>
               
-
             </div>
+    </div>
+
+
 
             
           );
-        })}
+        }
+        )}
       </center>
     </div>
   );
